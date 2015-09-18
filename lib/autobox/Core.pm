@@ -41,7 +41,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '1.28';
+our $VERSION = '1.29';
 
 use base 'autobox';
 
@@ -1567,6 +1567,8 @@ sub flip {
 #
 ##############################################################################################
 package autobox::Core::ARRAY;
+
+no if $] >= 5.018, warnings => 'experimental::smartmatch';
 
 use constant FIVETEN => ($] >= 5.010);
 
