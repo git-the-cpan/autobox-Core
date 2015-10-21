@@ -1,5 +1,18 @@
 Revision history for autobox::Core
 
+1.30
+    New Features
+    - first() arguments are now consistent with grep(), so now  you can
+      supply single non-ref scalar to it (xenu)
+
+    Incompatible Changes
+    - Removed smartmatch from first() and grep(). Now these methods have
+      consistent behaviour under all perl versions and their code is much
+      cleaner (xenu)
+
+    Docs
+    - Fixed typo reported by myfwhite on annocpan (xenu)
+
 1.29
     Fix
     - Suppress smartmatch deprecation warnings in perls >= 5.18 (xenu)
@@ -19,7 +32,7 @@ Revision history for autobox::Core
 
 1.25 Wed Jun 12 14:45:54 CDT 2013
     Fix
-    - remove 'use feature' from t/synopsis.t.  that was cut and paste from the 
+    - remove 'use feature' from t/synopsis.t.  that was cut and paste from the
       docs but wasn't actually necessary there.
 
 1.24 Sun Jul 15 11:05:11 PDT 2012
